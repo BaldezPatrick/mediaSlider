@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import CarouselItems from "./carouselItem";
 import CarouselControls from "./carouselControls";
 import axios from "axios";
+import "./carousel.css";
 
 interface CarouselItem {
   albumId: number;

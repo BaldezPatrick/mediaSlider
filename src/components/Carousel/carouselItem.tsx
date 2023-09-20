@@ -1,3 +1,5 @@
+import "./carouselItem.css";
+
 interface SliderItem {
   albumId: number;
   id: number;
