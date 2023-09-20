@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const fakeData = [
   {
     id: 1,
@@ -71,6 +73,15 @@ const Home: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const itemsPerPage = 3;
 
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex >= 0 ? prevIndex - 1 : prevIndex
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % fakeData.length);
+  };
 
   const displayedItems = fakeData.slice(
     currentIndex,
@@ -83,7 +94,9 @@ const Home: React.FC = () => {
     <>
       <div className="carousel">
         <div className="prevButton">
-          <button>&lt;</button>
+          <button onClick={handlePrev} disabled={currentIndex === 0}>
+            &lt;
+          </button>
         </div>
         <div className="carousel-items">
           {limitedDsiplayedItems.map((item) => (
@@ -94,7 +107,12 @@ const Home: React.FC = () => {
           ))}
         </div>
         <div className="nextButton">
-          <button>&gt;</button>
+          <button
+            onClick={handleNext}
+            disabled={currentIndex + itemsPerPage >= 10}
+          >
+            &gt;
+          </button>
         </div>
       </div>
     </>
