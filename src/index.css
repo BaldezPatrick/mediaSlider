@@ -55,3 +55,8 @@ footer {
   font-size: 15pt;
   padding: 1.5rem 0;
 }
+
+.catalogButton {
+  text-align: center;
+  margin-top: 4rem;
+}
