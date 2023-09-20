@@ -16,6 +16,10 @@ const router = createBrowserRouter([
     path: "article/:id",
     element: <Article />,
   },
+  {
+    path: "catalog",
+    element: <Catalog />,
+  },
 ]);
 
 const root = ReactDOM.createRoot(
