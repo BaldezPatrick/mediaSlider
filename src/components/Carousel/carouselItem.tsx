@@ -1,3 +1,4 @@
+import { useItemContext } from "../../context/sliderItemContext";
 import "./carouselItem.css";
 import { Link } from "react-router-dom";
 
@@ -14,13 +15,24 @@ interface CarouselItemsProps {
 }
 
 const CarouselItems: React.FC<CarouselItemsProps> = ({ item }) => {
+  const { setItemDetails } = useItemContext();
+
+  const handleClick = () => {
+    setItemDetails(
+      item.albumId,
+      item.id,
+      item.title,
+      item.url,
+      item.thumbnailUrl
+    );
+  };
   return (
     <>
       <Link to={`/article/${item.id}`} onClick={handleClick}>
-      <article key={item.id} className="carouselItem">
-        <img src={item.url} alt={item.title} />
-        <h2>{item.title}</h2>
-      </article>
+        <article key={item.id} className="carouselItem">
+          <img src={item.url} alt={item.title} />
+          <h2>{item.title}</h2>
+        </article>
       </Link>
     </>
   );
