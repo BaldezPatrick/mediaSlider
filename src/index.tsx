@@ -6,6 +6,7 @@ import Layout from "./components/Layout/layout";
 import Article from "./pages/Article";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ItemProvider } from "./context/sliderItemContext";
+import Catalog from "./pages/Catalog";
 
 const router = createBrowserRouter([
   {
