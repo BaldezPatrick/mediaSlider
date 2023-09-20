@@ -10,7 +10,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <header>
         <h1>Media Slider</h1>
       </header>
-      {children}
+      <main>{children}</main>
       <footer>Created by Patrick | 2023</footer>
     </>
   );
