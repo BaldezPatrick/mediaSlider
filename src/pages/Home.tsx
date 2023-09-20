@@ -68,6 +68,17 @@ const fakeData = [
 ];
 
 const Home: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const itemsPerPage = 3;
+
+
+  const displayedItems = fakeData.slice(
+    currentIndex,
+    currentIndex + itemsPerPage
+  );
+
+  const limitedDsiplayedItems = displayedItems.filter((item) => item.id <= 10);
+
   return (
     <>
       <div className="carousel">
@@ -75,7 +86,7 @@ const Home: React.FC = () => {
           <button>&lt;</button>
         </div>
         <div className="carousel-items">
-          {fakeData.map((item) => (
+          {limitedDsiplayedItems.map((item) => (
             <article key={item.id} className="carousel-item">
               <img src={item.image} alt={item.title} />
               <h2>{item.title}</h2>
