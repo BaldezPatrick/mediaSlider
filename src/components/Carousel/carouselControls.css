@@ -1,0 +1,10 @@
+.buttonsWrapper {
+    display: flex;
+    gap: 2rem;
+}
+
+.prevButton, .nextButton {
+    border-radius: 50%;
+    padding: 1rem;
+    font-size: 15px;
+}

@@ -1,14 +1,21 @@
 .carousel {
-    align-items: center;
     display: flex;
-    gap: 1rem;
+    padding: 4rem 0;
+    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    padding: 5rem 4.5rem;
+    gap: 3rem;
 }
 
 .carouselItems {
-    align-items: center;
     display: flex;
+    gap: 40px;
     justify-content: center;
-    gap: 1.5rem;
+    width: 700px;
+}
+
+@media screen and (max-width: 768px) {
+    .carouselItems {
+        width: auto;
+    }
 }
