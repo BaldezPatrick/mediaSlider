@@ -5,11 +5,11 @@ import axios from "axios";
 import "./carousel.css";
 
 interface CarouselItem {
-  albumId: number;
   id: number;
   title: string;
   url: string;
   thumbnailUrl: string;
+  body: string;
 }
 
 const Carousel: React.FC = () => {

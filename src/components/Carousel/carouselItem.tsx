@@ -3,11 +3,11 @@ import "./carouselItem.css";
 import { Link } from "react-router-dom";
 
 interface SliderItem {
-  albumId: number;
   id: number;
   title: string;
   url: string;
   thumbnailUrl: string;
+  body: string;
 }
 
 interface CarouselItemsProps {
@@ -18,13 +18,7 @@ const CarouselItems: React.FC<CarouselItemsProps> = ({ item }) => {
   const { setItemDetails } = useItemContext();
 
   const handleClick = () => {
-    setItemDetails(
-      item.albumId,
-      item.id,
-      item.title,
-      item.url,
-      item.thumbnailUrl
-    );
+    setItemDetails(item.id, item.title, item.url, item.thumbnailUrl, item.body);
   };
   return (
     <>

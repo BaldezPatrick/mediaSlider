@@ -1,17 +1,17 @@
 import { ReactNode, createContext, useContext, useState } from "react";
 
 interface ItemContextType {
-  albumId: number | null;
   id: number | null;
   title: string | null;
   url: string | null;
   thumbnailUrl: string | null;
+  body: string | null;
   setItemDetails: (
-    albumId: number,
     id: number,
     title: string,
     url: string,
-    thumbnailUrl: string
+    thumbnailUrl: string,
+    body: string
   ) => void;
 }
 
@@ -30,29 +30,29 @@ export const useItemContext = () => {
 };
 
 export const ItemProvider: React.FC<ItemProviderProps> = ({ children }) => {
-  const [albumId, setAlbumId] = useState<number | null>(null);
   const [id, setId] = useState<number | null>(null);
   const [title, setTitle] = useState<string | null>(null);
   const [url, setUrl] = useState<string | null>(null);
   const [thumbnailUrl, setThumbnailUrl] = useState<string | null>(null);
+  const [body, setBody] = useState<string | null>(null);
 
   const setItemDetails = (
-    itemAlbumId: number,
     itemId: number,
     itemTitle: string,
     itemUrl: string,
-    itemThumbnailUrl: string
+    itemThumbnailUrl: string,
+    itemBody: string
   ) => {
-    setAlbumId(itemAlbumId);
     setId(itemId);
     setTitle(itemTitle);
     setUrl(itemUrl);
     setThumbnailUrl(itemThumbnailUrl);
+    setBody(itemBody);
   };
 
   return (
     <ItemContext.Provider
-      value={{ albumId, id, title, url, thumbnailUrl, setItemDetails }}
+      value={{ id, title, url, thumbnailUrl, body, setItemDetails }}
     >
       {children}
     </ItemContext.Provider>
