@@ -6,8 +6,8 @@ const Home: React.FC = () => {
     <>
       <Carousel />
       <div className="catalogButton">
-        <Link to={"catalog"}>
-          <button>Catalog</button>
+        <Link to={"catalogo"}>
+          <button>Catálogo</button>
         </Link>
       </div>
     </>
