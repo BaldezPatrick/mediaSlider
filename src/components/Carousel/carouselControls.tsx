@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
+import "./carouselControls.css";
 
 interface CarouselControlsProps {
-  children: ReactNode;
   currentIndex: number;
   dataLength: number;
   onPrevClick: () => void;
@@ -9,7 +9,6 @@ interface CarouselControlsProps {
 }
 
 const CarouselControls: React.FC<CarouselControlsProps> = ({
-  children,
   currentIndex,
   dataLength,
   onPrevClick,
@@ -17,21 +16,22 @@ const CarouselControls: React.FC<CarouselControlsProps> = ({
 }) => {
   return (
     <>
-      <button
-        className="prevButton"
-        onClick={onPrevClick}
-        disabled={currentIndex === 0}
-      >
-        &lt;
-      </button>
-      {children}
-      <button
-        className="nextButton"
-        onClick={onNextClick}
-        disabled={currentIndex + 3 >= dataLength}
-      >
-        &gt;
-      </button>
+      <div className="buttonsWrapper">
+        <button
+          className="prevButton"
+          onClick={onPrevClick}
+          disabled={currentIndex === 0}
+        >
+          <strong>&lt;</strong>
+        </button>
+        <button
+          className="nextButton"
+          onClick={onNextClick}
+          disabled={currentIndex + 3 >= dataLength}
+        >
+          <strong>&gt;</strong>
+        </button>
+      </div>
     </>
   );
 };
