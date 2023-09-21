@@ -46,18 +46,17 @@ const Carousel: React.FC = () => {
   return (
     <>
       <div className="carousel">
+        <div className="carouselItems">
+          {limitedDsiplayedItems.map((item) => (
+            <CarouselItems key={item.id} item={item} />
+          ))}
+        </div>
         <CarouselControls
           currentIndex={currentIndex}
           dataLength={data.length}
           onPrevClick={handlePrev}
           onNextClick={handleNext}
-        >
-          <div className="carouselItems">
-            {limitedDsiplayedItems.map((item) => (
-              <CarouselItems key={item.id} item={item} />
-            ))}
-          </div>
-        </CarouselControls>
+        />
       </div>
     </>
   );
