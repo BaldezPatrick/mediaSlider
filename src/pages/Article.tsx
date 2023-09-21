@@ -7,21 +7,18 @@ const Article: React.FC = () => {
     <>
       <section className="articleWrapper">
         <h1>Your selected item details</h1>
-        <div className="articleTable">
-          <table>
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Title</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>{id}</td>
-                <td>{title}</td>
-              </tr>
-            </tbody>
-          </table>
+        <div className="articleList">
+          <ul>
+            <li>
+              <strong>ID:</strong> {id}
+            </li>
+            <li>
+              <strong>Title:</strong> {title}
+            </li>
+            <li>
+              <strong>Body:</strong> {body}
+            </li>
+          </ul>
         </div>
         <section className="articleImagesWrapper">
           <h2>Images</h2>
