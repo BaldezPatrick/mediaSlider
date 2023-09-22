@@ -19,6 +19,8 @@ Este é um projeto para um teste técnico que demonstra como mostrar um catálog
 
 Siga estas etapas para executar o projeto em sua máquina local:
 
+1. Faça um clone do repositório:
+
 ```
     git clone <repository-url>
 ```
