@@ -45,5 +45,5 @@ Siga estas etapas para executar o projeto em sua máquina local:
 
 ## APIs utilizadas
 
- https://jsonplaceholder.typicode.com/photos
- https://jsonplaceholder.typicode.com/posts
+ - https://jsonplaceholder.typicode.com/photos
+ - https://jsonplaceholder.typicode.com/posts
