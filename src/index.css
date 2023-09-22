@@ -32,6 +32,10 @@ p {
   color: var(--paragraph-color);
 }
 
+ul {
+  list-style: none;
+}
+
 header {
   padding: 2rem;
   text-align: center;
@@ -44,6 +48,7 @@ main {
 }
 
 footer {
+  padding: 1rem 0;
   width: 100%;
   text-align: center;
 }

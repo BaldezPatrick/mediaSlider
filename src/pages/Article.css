@@ -1,0 +1,34 @@
+.articleWrapper {
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+    max-width: 600px;
+}
+
+.articleList {
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.articleImagesWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.articleImagesItems {
+    width: 80%;
+}
+
+.articleImage img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 767px) {
+    
+}
