@@ -4,6 +4,7 @@ Este é um projeto para um teste técnico que demonstra como mostrar um catálog
 
 ## Tecnologias utilizadas
 
+- TypeScript
 - React
 - React Router
 - Axios (para fazer chamadas à API)
