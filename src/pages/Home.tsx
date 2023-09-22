@@ -1,6 +1,7 @@
 import Carousel from "../components/Carousel/carousel";
 import { Link } from "react-router-dom";
 import "./Home.css";
+import Button from "../components/Button/button";
 
 const Home: React.FC = () => {
   return (
@@ -8,7 +9,7 @@ const Home: React.FC = () => {
       <Carousel />
       <div className="catalogButton">
         <Link to={"catalogo"}>
-          <button>Catálogo</button>
+          <Button textButton={"Catálogo"} />
         </Link>
       </div>
     </>

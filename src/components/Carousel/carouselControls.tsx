@@ -1,4 +1,5 @@
 import "./carouselControls.css";
+import Button from "../Button/button";
 
 interface CarouselControlsProps {
   currentIndex: number;
@@ -16,20 +17,18 @@ const CarouselControls: React.FC<CarouselControlsProps> = ({
   return (
     <>
       <div className="buttonsWrapper">
-        <button
-          className="prevButton"
-          onClick={onPrevClick}
+        <Button
+          className={"prevButton"}
+          handleClick={onPrevClick}
+          textButton={"<"}
           disabled={currentIndex === 0}
-        >
-          <strong>&lt;</strong>
-        </button>
-        <button
-          className="nextButton"
-          onClick={onNextClick}
+        />
+        <Button
+          className={"nextButton"}
+          handleClick={onNextClick}
+          textButton={">"}
           disabled={currentIndex + 3 >= dataLength}
-        >
-          <strong>&gt;</strong>
-        </button>
+        />
       </div>
     </>
   );

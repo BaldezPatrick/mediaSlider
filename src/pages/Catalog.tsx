@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "./Catalog.css";
 import { useItemContext } from "../context/sliderItemContext";
+import Button from "../components/Button/button";
 
 const itemsPerPage = 15;
 const totalItems = 150;
@@ -108,19 +109,17 @@ const Catalog: React.FC = () => {
       </div>
 
       <div className="pagination">
-        <button
-          onClick={() => handlePageChange(currentPage - 1)}
+        <Button
+          textButton={"Anterior"}
           disabled={currentPage === 1}
-        >
-          Anterior
-        </button>
+          handleClick={() => handlePageChange(currentPage - 1)}
+        />
         <span>{generatePaginationText()}</span>
-        <button
-          onClick={() => handlePageChange(currentPage + 1)}
+        <Button
+          handleClick={() => handlePageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
-        >
-          Próxima
-        </button>
+          textButton={"Próxima"}
+        />
       </div>
     </div>
   );
