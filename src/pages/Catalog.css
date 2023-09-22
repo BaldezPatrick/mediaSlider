@@ -38,16 +38,11 @@
   max-width: 300px;
 }
 
-.cardContent p {
-    width: 100%;
-    text-align: justify;
-}
-
 .cardContent h2 {
     font-size: 13pt;
     width: 100%;
     margin-top: 5px;
-    text-align: justify;
+    text-align: center;
 }
 
 .cardContent img {
