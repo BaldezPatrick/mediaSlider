@@ -29,12 +29,6 @@ const Article: React.FC = () => {
                 alt={url ? url : "No image content info"}
               />
             </div>
-            <div className="articleImage">
-              <img
-                src={thumbnailUrl ? thumbnailUrl : "No image content"}
-                alt={thumbnailUrl ? thumbnailUrl : "No image content info"}
-              />
-            </div>
           </div>
         </section>
       </section>
