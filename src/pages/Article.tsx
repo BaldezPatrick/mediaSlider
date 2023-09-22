@@ -14,22 +14,22 @@ const Article: React.FC = () => {
           textButton={"<"}
           handleClick={() => navigate(-1)}
         />
-        <h1>Your selected item details</h1>
+        <h1>Detalhes do item selecionado</h1>
         <div className="articleList">
           <ul>
             <li>
               <strong>ID:</strong> {id}
             </li>
             <li>
-              <strong>Title:</strong> {title}
+              <strong>Título:</strong> {title}
             </li>
             <li>
-              <strong>Body:</strong> {body}
+              <strong>Corpo da informação:</strong> {body}
             </li>
           </ul>
         </div>
         <section className="articleImagesWrapper">
-          <h2>Images</h2>
+          <h2>Imagem</h2>
           <div className="articleImagesItems">
             <div className="articleImage">
               <img
