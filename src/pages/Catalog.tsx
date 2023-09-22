@@ -108,7 +108,7 @@ const Catalog: React.FC = () => {
             >
               <div className="cardContent">
                 <div className="cardContentImg">
-                  <img src={item.url} alt={item.title} />
+                  <img src={item.thumbnailUrl} alt={item.title} />
                 </div>
                 <h2>{item.title}</h2>
               </div>
