@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./Catalog.css";
 import { useItemContext } from "../context/sliderItemContext";
@@ -20,6 +20,7 @@ const Catalog: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [items, setItems] = useState<CatalogItem[]>([]);
   const { setItemDetails } = useItemContext();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -91,6 +92,11 @@ const Catalog: React.FC = () => {
 
   return (
     <div className="catalog">
+      <Button
+        className={"catalogGoBackButton"}
+        textButton={"<"}
+        handleClick={() => navigate(-1)}
+      />
       <h1>Catálogo</h1>
       <div className="cardContainer">
         {itemsToDisplay.map((item) => (

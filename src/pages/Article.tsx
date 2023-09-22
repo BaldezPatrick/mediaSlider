@@ -1,11 +1,19 @@
 import { useItemContext } from "../context/sliderItemContext";
 import "./Article.css";
+import Button from "../components/Button/button";
+import { useNavigate } from "react-router-dom";
 
 const Article: React.FC = () => {
   const { id, title, url, body } = useItemContext();
+  const navigate = useNavigate();
   return (
     <>
       <section className="articleWrapper">
+        <Button
+          className={"goBackButton"}
+          textButton={"<"}
+          handleClick={() => navigate(-1)}
+        />
         <h1>Your selected item details</h1>
         <div className="articleList">
           <ul>
