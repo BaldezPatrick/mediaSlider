@@ -24,7 +24,7 @@ const CarouselItems: React.FC<CarouselItemsProps> = ({ item }) => {
     <>
       <Link to={`/artigo/${item.id}`} onClick={handleClick}>
         <article key={item.id} className="carouselItem">
-          <img src={item.url} alt={item.title} />
+          <img src={item.thumbnailUrl} alt={item.title} />
           <h2>{item.title}</h2>
         </article>
       </Link>
