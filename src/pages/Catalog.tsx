@@ -101,7 +101,6 @@ const Catalog: React.FC = () => {
                   <img src={item.url} alt={item.title} />
                 </div>
                 <h2>{item.title}</h2>
-                <p>{item.body || "No body content"}</p>
               </div>
             </Link>
           </div>
