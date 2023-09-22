@@ -1,4 +1,10 @@
-import { ReactNode, createContext, useContext, useState } from "react";
+import {
+  ReactNode,
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 
 interface ItemContextType {
   id: number | null;
@@ -48,7 +54,30 @@ export const ItemProvider: React.FC<ItemProviderProps> = ({ children }) => {
     setUrl(itemUrl);
     setThumbnailUrl(itemThumbnailUrl);
     setBody(itemBody);
+
+    const itemData = {
+      id: itemId,
+      title: itemTitle,
+      url: itemUrl,
+      thumbnailUrl: itemThumbnailUrl,
+      body: itemBody,
+    };
+    localStorage.setItem("itemData", JSON.stringify(itemData));
   };
+
+  useEffect(() => {
+    const storedItemData = localStorage.getItem("itemData");
+    if (storedItemData) {
+      const parseData = JSON.parse(storedItemData);
+      setItemDetails(
+        parseData.id,
+        parseData.title,
+        parseData.url,
+        parseData.thumbnailUrl,
+        parseData.body
+      );
+    }
+  }, []);
 
   return (
     <ItemContext.Provider
