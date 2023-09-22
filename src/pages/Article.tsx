@@ -2,7 +2,7 @@ import { useItemContext } from "../context/sliderItemContext";
 import "./Article.css";
 
 const Article: React.FC = () => {
-  const { id, title, url, thumbnailUrl, body } = useItemContext();
+  const { id, title, url, body } = useItemContext();
   return (
     <>
       <section className="articleWrapper">
