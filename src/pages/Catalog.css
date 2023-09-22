@@ -83,15 +83,17 @@
     .cardContainer {
         grid-template-columns: auto;
     }
-}
 
-@media screen and (max-width: 600px) {
     .catalogGoBackButton {
         left: 50px;
     }
 }
 
-@media screen and (max-width: 280px) {
+@media screen and (max-width: 600px) {
+
+}
+
+@media screen and (max-width: 301px) {
     .catalogGoBackButton {
         left: 20px;
     }
