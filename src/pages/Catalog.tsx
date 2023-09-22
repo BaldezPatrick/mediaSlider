@@ -45,7 +45,10 @@ const Catalog: React.FC = () => {
                 body: matchingPostItem.body,
               };
             } else {
-              return photoItem;
+              return {
+                ...photoItem,
+                body: "A API POST só vai até o elemento de número 100. Você encontrará a junção do parâmetro body a API photos apenas até o elemento 100.",
+              };
             }
           });
         console.log(combinedItems);
